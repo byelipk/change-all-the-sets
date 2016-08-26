@@ -2,7 +2,7 @@ defmodule HelloEcto.UserControllerTest do
   use HelloEcto.ConnCase
 
   alias HelloEcto.User
-  @valid_attrs %{bio: "some content", email: "some content", name: "some content", number_of_pets: 42}
+  @valid_attrs %{bio: "content", email: "content@email.com", name: "some content", number_of_pets: 42}
   @invalid_attrs %{}
 
   test "lists all entries on index", %{conn: conn} do
