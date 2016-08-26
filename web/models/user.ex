@@ -6,6 +6,8 @@ defmodule HelloEcto.User do
     field :email, :string
     field :bio, :string
     field :number_of_pets, :integer
+    
+    has_many :videos, HelloEcto.Video
 
     timestamps()
   end
@@ -17,5 +19,8 @@ defmodule HelloEcto.User do
     struct
     |> cast(params, [:name, :email, :bio, :number_of_pets])
     |> validate_required([:name, :email, :bio, :number_of_pets])
+    |> validate_length(:bio, min: 2)
+    |> validate_length(:bio, max: 10)
+    |> validate_format(:email, ~r/@/)
   end
 end

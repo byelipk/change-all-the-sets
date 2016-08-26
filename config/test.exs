@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :hello_ecto, HelloEcto.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "rails",
+  password: "rails4dev",
   database: "hello_ecto_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
