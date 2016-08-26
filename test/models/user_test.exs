@@ -8,7 +8,6 @@ defmodule HelloEcto.UserTest do
 
   test "changeset with valid attributes" do
     changeset = User.changeset(%User{}, @valid_attrs)
-    IO.inspect changeset.errors
     assert changeset.valid?
   end
 
